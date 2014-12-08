@@ -9,8 +9,8 @@ SRC_OBJS = $(SRC:.c=.o)
 	$(CC) $< -c -o $@ $(CFLAGS)
 
 test: $(OBJS) $(SRC_OBJS)
-	$(CC) test.c $(SRC_OBJS) $(OBJS) -Ideps $(CFLAGS) -o test
-	./test
+	@$(CC) test.c $(SRC_OBJS) $(OBJS) -Ideps $(CFLAGS) -o test
+	@./test
 
 clean:
 	rm -f test test.txt

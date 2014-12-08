@@ -3,7 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "tap.c/tap.h"
-#include "fs/fs.h"
 #include "io.h"
 #include "filewriter.h"
 
