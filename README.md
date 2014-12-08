@@ -1,7 +1,7 @@
 
 # io.c
 
-  [![experimental](http://hughsk.github.io/stability-badges/dist/experimental.svg)](http://github.com/hughsk/stability-badges)
+  ![](http://img.shields.io/badge/stability-experimental-orange.svg?style=flat)
 
   minimal io abstraction for c, inspired by go/io
 
