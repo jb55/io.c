@@ -9,9 +9,9 @@
 
 ## Installation
 
-  Install with npm
+  Install with clib
 
-    $ npm install jb55/io.c
+    $ clib install jb55/io.c
 
 ## Motivation
 
