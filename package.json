@@ -1,0 +1,12 @@
+{
+  "name": "io",
+  "version": "0.0.1",
+  "repo": "jb55/io.c",
+  "description": "minimal io abstraction",
+  "keywords": ["io"],
+  "install": "make install",
+  "development": {
+    "thlorenz/tap.c": "*"
+  }
+}
+
