@@ -18,6 +18,8 @@
 Having abstract readers and writers will allow libraries to read and write data
 from different sources using the same api.
 
+Future: piping data to and from different sources, stream abstraction, etc
+
 ## Example
 
 ```c
