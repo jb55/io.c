@@ -25,10 +25,21 @@ Future: piping data to and from different sources, stream abstraction, etc
 ```c
 #include "io/io.h"
 
-struct io_writer *writer = file_io_writer("test.txt", "w");
-io_write(writer, (void*)msg, size);
+int written;
+io_writer *writer = file_io_writer("test.txt", "wb");
+io_write(writer, (void*)msg, size, &written);
 io_writer_close(writer);
 ```
+
+## API
+
+### int io_copy(io_reader \*src, io_writer \*dst, int64_t \*written)
+
+returns an error code or IO_SUCCESS
+
+### TODO
+
+Finish docs
 
 ## License
 
