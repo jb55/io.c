@@ -1,16 +1,17 @@
 
-#include "io.h"
+#include "writer.h"
 #include <stdio.h>
 
 /* internal */
 struct io_writer {
-  struct io_writer_def def;
+  io_writer_def_t def;
   void* ctx;
-  int opened:1;
+  int last_error;
 };
 
 /* io_writer function definitions */
-struct io_writer *io_new_writer(struct io_writer_def *def, void* ctx)
+io_writer*
+io_new_writer(io_writer_def_t *def, void* ctx)
 {
   struct io_writer *writer = malloc(sizeof (struct io_writer));
   writer->def.open = def->open;
@@ -21,11 +22,13 @@ struct io_writer *io_new_writer(struct io_writer_def *def, void* ctx)
   return writer;
 }
 
-int io_write(struct io_writer *writer, void* data, size_t len) {
-  return writer->def.write(writer->ctx, data, len);
+int
+io_write(io_writer *writer, void* data, int len, int* written) {
+  return writer->def.write(writer->ctx, data, len, written);
 };
 
-int io_writer_close(struct io_writer *writer)
+int
+io_writer_close(io_writer *writer)
 {
   writer->def.close(writer->ctx);
   free(writer);

@@ -6,7 +6,8 @@
   "keywords": ["io"],
   "install": "make install",
   "development": {
-    "thlorenz/tap.c": "*"
+    "thlorenz/tap.c": "*",
+    "stephenmathieson/mkdirp.c": "*"
   }
 }
 
